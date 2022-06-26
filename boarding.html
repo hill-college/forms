@@ -96,126 +96,16 @@
 <button class="btn btn-block btn-lg btn-info" data-trip-type="transfer"><i class="fa fa-sort"></i>&nbsp;&nbsp;Within town</button>
 </div>
 </div>
-<div class="row step2" id="srcloc">
-<input type="hidden" name="trip-activity" id="trip-activities" value="" />
-<input type="hidden" name="trip-location" id="trip-location" value="" />
-<input type="hidden" name="trip-srcloc" id="trip-srcloc" value="" />
-<div class="col-md-12">
-<h3>Select where to be picked up in town:</h3>
-<h4 id="srcloc-selected"></h4>
-<div class="input-group">
-<input type="text" class="form-control" placeholder="Type to search" id="srcloc-list-search" data-filter="srcloc-list-search" data-list="srcloc-list">
-<span class="input-group-btn">
-<button class="btn btn-info" type="button" id="srcloc-list-search-button" data-filter="srcloc-list-search" data-list="srcloc-list"><i class="fa fa-search"></i></button>
-</span>
-</div>
-<ul id="srcloc-list" class="filter-list">
-</ul>
-<div class="fixed-run-info"><em><span style="color: red">*</span> Time-limited locations</em>: Trips are only made to this location at certain times of the day/week.</div>
-</div>
-</div>
-<div class="row step2" id="location">
-<div class="col-md-12">
-<h3>Select your destination in town:</h3>
-<h4 id="location-selected"></h4>
-<div class="input-group">
-<input type="text" class="form-control" placeholder="Type to search" id="location-list-search" data-filter="location-list-search" data-list="location-list">
-<span class="input-group-btn">
-<button class="btn btn-info" type="button" id="location-list-search-button" data-filter="location-list-search" data-list="location-list"><i class="fa fa-search"></i></button>
-</span>
-</div>
-<ul id="location-list" class="filter-list">
-</ul>
-<div class="fixed-run-info"><em><span style="color: red">*</span> Trips are only made to this location at certain times of the day/week.</em></div>
-</div>
-</div>
-<div class="row step2" id="activity">
-<div class="col-md-12">
-<h3>Why are you going to this location?</h3>
-<h4 id="activities-selected"></h4>
-<div class="input-group">
-<input type="text" class="form-control" placeholder="Type to search" id="activities-list-search" data-filter="activities-list-search" data-list="activities-list">
-<span class="input-group-btn">
-<button class="btn btn-info" type="button" id="activities-list-search-button" data-filter="activities-list-search" data-list="activities-list"><i class="fa fa-search"></i></button>
-</span>
-</div>
-<ul id="activities-list" class="filter-list">
-</ul>
-</div>
-</div>
-<div class="row step3" id="outbound">
-<input type="hidden" name="trip-outbound" id="trip-outbound" value="" />
-<div class="col-md-12">
-<h3>Select the scheduled bus run from Campus to Town:</h3>
-<h4 id="outbound-selected"></h4>
-<ul id="outbound-schedule" class="bus-schedule">
-</ul>
-</div>
-</div>
-<div class="row step3" id="inbound">
-<input type="hidden" name="trip-inbound" id="trip-inbound" value="" />
-<div class="col-md-12">
-<h3>Select the scheduled bus run from Town to Campus:</h3>
-<h4 id="inbound-selected"></h4>
-<ul id="inbound-schedule" class="bus-schedule">
-</ul>
-</div>
-</div>
-<div class="row step3" id="transfer">
-<input type="hidden" name="trip-transfer" id="trip-transfer" value="" />
-<div class="col-md-12" id="transfer">
-<h3>Select the scheduled bus run to transfer on:</h3>
-<h4 id="transfer-selected"></h4>
-<ul id="transfer-schedule" class="bus-schedule">
-</ul>
-</div>
-</div>
-<div class="row confirm" id="confirm">
-<div class="container">
-<h3>Confirm your booking:</h3>
 
-<div class="row confirm-all"> <div class="col-sm-2 confirm-label">Booking for:</div> <div class="col-sm-10" id="confirm-name"></div> </div>
-<div class="row confirm-all"> <div class="col-sm-2 confirm-label">Date:</div> <div class="col-sm-10" id="confirm-date"></div> </div>
 
-<div class="row confirm-transfer confirm-inbound"> <div class="col-sm-2 confirm-label">Pickup from:</div> <div class="col-sm-10" id="confirm-srcloc"></div> </div>
-
-<div class="row confirm-outbound"> <div class="col-sm-2 confirm-label">Pickup from:</div> <div class="col-sm-10">GSG Campus</div> </div>
-
-<div class="row confirm-inbound"> <div class="col-sm-2 confirm-label">Destination:</div> <div class="col-sm-10">GSG Campus</div> </div>
-
-<div class="row confirm-return confirm-transfer confirm-outbound"> <div class="col-sm-2 confirm-label">Destination:</div> <div class="col-sm-10" id="confirm-location"></div> </div>
-<div class="row confirm-return confirm-transfer confirm-outbound"> <div class="col-sm-2 confirm-label">Activity:</div> <div class="col-sm-10" id="confirm-activity"></div> </div>
-
-<div class="row confirm-transfer"> <div class="col-sm-2 confirm-label">Pickup at:</div> <div class="col-sm-10" id="confirm-transfer"></div> </div>
-
-<div class="row confirm-outbound confirm-return"> <div class="col-sm-2 confirm-label">Leaving GSG:</div> <div class="col-sm-10" id="confirm-outbound"></div> </div>
-
-<div class="row confirm-inbound confirm-return"> <div class="col-sm-2 confirm-label">Leaving town:</div> <div class="col-sm-10" id="confirm-inbound"></div> </div>
-<div class="row confirm-all">
-<div class="col-md-12">
-<label for="confirm-notes">Notes or extra information:</label><br />
-<textarea class="form-control" name="notes" id="confirm-notes" maxlength="80" onkeyup="charsremain();"></textarea>
-<div class="notes-charsremain"><span id="charsremain">80</span> characters remaining</div><br />
-</div>
-</div>
-<div class="form-row confirm-all align-items-center">
-<div class="col-md-4 col-md-offset-4" style="text-align: center">
-<button class="btn btn-success" onClick="submit();"><i class="fa fa-check-circle"></i> Confirm</button>
-<button class="btn btn-default" onclick="document.location.href='';"><i class="fa fa-times-circle"></i> Cancel</button>
-<br />
 
 </div>
 </div>
-</div>
-</div>
-<div class="row success">
-<div class="col-md-12">
-<div class="alert alert-success"><i class="fa fa-1x fa-check-circle"></i> Thankyou, your booking has been confirmed.</div>
 </div>
 </div>
 <div class="row failure">
 <div class="col-md-12">
-<div class="alert alert-warning"><i class="fa fa-1x fa-exclamation-circle"></i> There was an error. Please contact the IT department.</div>
+<div class="alert alert-warning"><i class="fa fa-1x fa-exclamation-circle"></i> We cannot get the site data. Please contact the IT department!</div>
 <div id="error_text"></div>
 </div>
 </div> <div class='clearfix'>&nbsp;</div>
